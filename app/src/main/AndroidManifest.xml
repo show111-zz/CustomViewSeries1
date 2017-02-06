@@ -18,6 +18,9 @@
 
         <activity android:name=".PlayImageActivity"/>
         <activity android:name=".PullChooseActivity"/>
+        <activity android:name=".CustomOnOffActivity"/>
+        <activity android:name=".PullRefreshActivity"/>
+        <activity android:name=".SlideSideActivity"/>
 
     </application>
 
