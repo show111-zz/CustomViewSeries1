@@ -1,10 +1,12 @@
 package com.example.lihf.customviewseries1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.example.lihf.customviewseries1.util.AnimationUtils;
@@ -20,6 +22,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     boolean isLevel2Display = true;
     boolean isLevel1Display = true;
     private static final String tag = "MainActivity";
+    private Button btn_one;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         // 添加点击事件
         findViewById(R.id.ib_home).setOnClickListener(this);
         findViewById(R.id.ib_menu).setOnClickListener(this);
+        findViewById(R.id.btn_one).setOnClickListener(this);
 
         rl_level1 = (RelativeLayout) findViewById(R.id.rl_level1);
         rl_level2 = (RelativeLayout) findViewById(R.id.rl_level2);
@@ -121,6 +125,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }
                 // 置反
                 isLevel3Display = !isLevel3Display;
+                break;
+
+            case R.id.btn_one:
+                startActivity(new Intent(MainActivity.this,PlayImageActivity.class));
                 break;
 
             default:
