@@ -30,7 +30,7 @@ public class CustomOnOffActivity extends Activity{
 
             @Override
             public void onStateUpdate(boolean state) {
-                Toast.makeText(getApplicationContext(), "state: " + state, 0).show();
+                Toast.makeText(getApplicationContext(), "state: " + state, Toast.LENGTH_LONG).show();
             }
 
         });
